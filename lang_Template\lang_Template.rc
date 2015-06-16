@@ -1,0 +1,807 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "lang_Template\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "lang_Template\0"
+            VALUE "LegalCopyright", "Copyright © 2004\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "lang_Template.dll\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS MOVEABLE PURE 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 268, 104
+STYLE DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About roboServ"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,21,20
+    LTEXT           "roboServ Version 1.0",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 2004 by Thees Schwab",IDC_STATIC,40,25,
+                    221,8
+    DEFPUSHBUTTON   "OK",IDOK,211,7,50,16,WS_GROUP
+    LTEXT           "Thanks to Nushi@2SEN (http://2sen.dip.jp)\nKing Marco (www.kingmarco.net)\nZhen-Xlogic for testing and suggestions (http://mxcontrolgreece.sf.net)",
+                    IDC_STATIC,40,49,221,33
+    LTEXT           "MXControl - http://mxcontrol.sourceforge.net",
+                    IDC_STATIC,40,88,221,9
+    LTEXT           "Distributed under the terms of the GNU General Public License",
+                    IDC_STATIC,40,37,221,8
+END
+
+IDD_IN_BAR_DLG DIALOG DISCARDABLE  0, 0, 205, 249
+STYLE DS_FIXEDSYS | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "&Room is visible",IDC_LISTED,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,4,64,10
+    CONTROL         "&Localhost is always admin",IDC_AUTO_OP_LOCALHOST,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,75,4,123,10
+    CONTROL         "Allow multiple connections from the same &IP",
+                    IDC_SINGLEUSER_PER_IP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,15,177,10
+    CONTROL         "&Block NushiChat and WinMX 3.3x",IDC_BLOCK_MX331,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,25,191,10
+    CONTROL         "&Enable colors",IDC_COLOR,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,36,191,10
+    LTEXT           "&Topic",IDC_STATIC,7,47,19,8
+    EDITTEXT        IDC_TOPIC,7,57,191,14,ES_AUTOHSCROLL
+    LTEXT           "&Motd",IDC_STATIC,7,73,17,8
+    EDITTEXT        IDC_MOTD,7,82,191,14,ES_AUTOHSCROLL
+    LTEXT           "&Password message",IDC_STATIC,7,98,62,8
+    EDITTEXT        IDC_KEYMSG,7,107,191,14,ES_AUTOHSCROLL
+    LTEXT           "&Welcome message",IDC_STATIC,7,123,61,8
+    EDITTEXT        IDC_WELCOME,7,132,191,14,ES_AUTOHSCROLL
+    LTEXT           "&Adminpassword:",IDC_STATIC,7,152,52,8
+    EDITTEXT        IDC_ADMINPASSWORD,63,149,135,14,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    LTEXT           "Voi&cepassword:",IDC_STATIC,7,168,51,8
+    EDITTEXT        IDC_VOICEPASSWORD,63,165,135,14,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    LTEXT           "&God-User",IDC_STATIC,7,187,31,8
+    EDITTEXT        IDC_GOD_NAME,63,184,135,14,ES_AUTOHSCROLL
+    CONTROL         "God-User is &visible in channel",IDC_VISIBLE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,201,118,10
+    COMBOBOX        IDC_GOD_LINE,7,214,90,86,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    EDITTEXT        IDC_GOD_FILES,108,213,90,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "Save",IDOK,95,228,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,148,228,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_IN_BAR_DLG DLGINIT
+BEGIN
+    IDC_GOD_LINE, 0x403, 8, 0
+0x6e55, 0x6e6b, 0x776f, 0x006e, 
+    IDC_GOD_LINE, 0x403, 6, 0
+0x3431, 0x342e, 0x004b, 
+    IDC_GOD_LINE, 0x403, 6, 0
+0x3832, 0x382e, 0x004b, 
+    IDC_GOD_LINE, 0x403, 6, 0
+0x3333, 0x362e, 0x004b, 
+    IDC_GOD_LINE, 0x403, 4, 0
+0x3635, 0x004b, 
+    IDC_GOD_LINE, 0x403, 9, 0
+0x3436, 0x204b, 0x5349, 0x4e44, "\000" 
+    IDC_GOD_LINE, 0x403, 10, 0
+0x3231, 0x4b38, 0x4920, 0x4453, 0x004e, 
+    IDC_GOD_LINE, 0x403, 6, 0
+0x6143, 0x6c62, 0x0065, 
+    IDC_GOD_LINE, 0x403, 4, 0
+0x5344, 0x004c, 
+    IDC_GOD_LINE, 0x403, 3, 0
+0x3154, "\000" 
+    IDC_GOD_LINE, 0x403, 3, 0
+0x3354, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 261
+        VERTGUIDE, 40
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 97
+    END
+
+    IDD_IN_BAR_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 198
+        VERTGUIDE, 14
+        VERTGUIDE, 63
+        VERTGUIDE, 191
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 242
+        HORZGUIDE, 144
+        HORZGUIDE, 160
+        HORZGUIDE, 179
+        HORZGUIDE, 208
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\idr_main.ico"
+IDR_roboServTYPE        ICON    DISCARDABLE     "res\\idr_robo.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVECFG
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        POPUP "Toolbars"
+        BEGIN
+            MENUITEM "&Menu bar",                   32771
+            MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+            MENUITEM "Hosting bar",                 IDR_HOSTBAR
+            MENUITEM "&Visual Styles",              130
+            MENUITEM "&Language Bar",               IDR_LANGBAR
+        END
+        MENUITEM "&Command bar",                32775
+        MENUITEM "&Userlist",                   32776
+        MENUITEM "&Settings bar",               ID_VIEW_RESIZABLE_BAR_2
+        MENUITEM SEPARATOR
+        MENUITEM "Look 200&3",                  32784
+        MENUITEM "Look &XP",                    32773
+        MENUITEM "Look &2K",                    32772
+    END
+    POPUP "Users"
+    BEGIN
+        MENUITEM "Add Admin",                   ID_USERLIST_ADDADMIN
+        MENUITEM "Remove Admin",                ID_USERLIST_REMOVEADMIN
+        MENUITEM SEPARATOR
+        MENUITEM "Voice",                       ID_USERLIST_GIVEVOICE
+        MENUITEM "Muzzle",                      ID_USERLIST_REMOVEVOICE
+        MENUITEM SEPARATOR
+        MENUITEM "Add Agent",                   ID_USERLIST_ADDAGENT
+        MENUITEM "Remove Agent",                ID_USERLIST_REMOVEAGENT
+        MENUITEM SEPARATOR
+        MENUITEM "Hide",                        ID_USERLIST_HIDE
+        MENUITEM "Show",                        ID_USERLIST_SHOW
+        MENUITEM SEPARATOR
+        MENUITEM "Copy Username",               ID_USERLIST_COPYUSERNAME
+        MENUITEM "Copy IP",                     ID_USERLIST_COPYIP
+        MENUITEM SEPARATOR
+        MENUITEM "Statistics",                  ID_USERLIST_STATISTICS
+        MENUITEM "Usermodes",                   ID_USERLIST_USERMODES
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "Command Help",                ID_HELP_COMMANDHELP
+        MENUITEM "Visit Homepage",              ID_HELP_VISITHOMEPAGE
+        MENUITEM SEPARATOR
+        MENUITEM "&About roboServ...",          ID_APP_ABOUT
+    END
+END
+
+IDR_SYSTRAY MENU DISCARDABLE 
+BEGIN
+    POPUP "SYSTRAY"
+    BEGIN
+        MENUITEM "Restore",                     ID_SYSTRAY_RESTORE
+        MENUITEM "&Exit",                       ID_APP_EXIT
+    END
+END
+
+IDR_USERLIST MENU DISCARDABLE 
+BEGIN
+    POPUP "Userlist"
+    BEGIN
+        MENUITEM "Add Admin",                   ID_USERLIST_ADDADMIN
+        MENUITEM "Remove Admin",                ID_USERLIST_REMOVEADMIN
+        MENUITEM SEPARATOR
+        MENUITEM "Voice",                       ID_USERLIST_GIVEVOICE
+        MENUITEM "Muzzle",                      ID_USERLIST_REMOVEVOICE
+        MENUITEM SEPARATOR
+        MENUITEM "Add Agent",                   ID_USERLIST_ADDAGENT
+        MENUITEM "Remove Agent",                ID_USERLIST_REMOVEAGENT
+        MENUITEM SEPARATOR
+        MENUITEM "Hide",                        ID_USERLIST_HIDE
+        MENUITEM "Show",                        ID_USERLIST_SHOW
+        MENUITEM SEPARATOR
+        MENUITEM "Copy Username",               ID_USERLIST_COPYUSERNAME
+        MENUITEM "Copy IP",                     ID_USERLIST_COPYIP
+        MENUITEM SEPARATOR
+        MENUITEM "Statistics",                  ID_USERLIST_STATISTICS
+        MENUITEM "Usermodes",                   ID_USERLIST_USERMODES
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_HOSTBAR TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_ROOMNAMEBOX
+    SEPARATOR
+    BUTTON      ID_ROOMIP
+    SEPARATOR
+    BUTTON      ID_ROOMPORT
+    SEPARATOR
+    BUTTON      ID_HOSTCHANNEL
+    BUTTON      ID_STOPCHANNEL
+END
+
+IDR_LANGBAR TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_LANGSWITCHER
+END
+
+IDR_MAINFRAME TOOLBAR MOVEABLE PURE  16, 15
+BEGIN
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVECFG
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+END
+
+IDR_TOOLBAR2 TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_VIEW_LIKE_OFFICE_2003
+    BUTTON      ID_VIEW_LIKE_OFFICE_XP
+    BUTTON      ID_VIEW_LIKE_OFFICE_2K
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_HOSTBAR             BITMAP  DISCARDABLE     "res\\hostbar.bmp"
+IDR_LANGBAR             BITMAP  DISCARDABLE     "res\\langbar.bmp"
+IDR_MAINFRAME           BITMAP  MOVEABLE PURE   "res\\mainfram.bmp"
+IDR_TOOLBAR2            BITMAP  DISCARDABLE     "res\\toolbar2.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "roboServ\n\nroboServ\n\n\nroboServ.Document\nroboServ.Document"
+    IDR_TOOLBAR2            "Show or hide the Look&Feel bar\nToggle Look&Feel bar"
+    IDS_ERROR_SERVER_FILE   "Could not access the server configuration file."
+    IDS_WPN_DISCONNECTED    "WPN Disconnected."
+    IDS_COMMAND_EXECUTED    "Command '%s' was executed.\n"
+    IDS_SERVER_CFG_SAVED    "Your settings have been saved."
+    IDR_MESSAGEVIEW_TMPL    "MessageView\nMessageView\nMessageView\nMessageView Files (*.mes)\nmes\nMessageView.Document\nMessageView Document"
+    IDS_WPN_WARNING         "Note: As long as you are not connected to the WinMX Peer Network, you can not browse other peoples shares, view the channellist and send/or recieve PM's!"
+    IDS_ERROR_NODEREQUIRED  "You must specify a hostname and the TCP of the Primary-Node you want to connect to."
+    IDS_SERVER_ROOMRENAME   "Channelname changed from '%s' to '%s' [Full name is '%s']\n"
+    IDS_ERROR_CONNECTFORCED "Error, could not connect to Primary Node on specified Host and Port."
+    IDS_NOVOICE             "You don't have a voice."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SERVER_EXILED       "has been exiled to '%s' by %s (%s)."
+    IDS_ERROR_NOTUNDERSTOOD_SEND 
+                            "Command '%s' not understood. May be you missed a parameter or misspelled it?"
+    IDS_SERVER_CFG_LOADED   "Room configuration has been loaded and room was started."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ERROR_SERVER_WRONGKEY "Invalid Key"
+    IDR_LANGBAR             "Show/hide the language bar\nShow/hide the language bar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "roboServ"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_NEW2            "Create a new document\nNew"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+    IDS_SERVER_KICKEDBANNED "has been banned and kicked by %s (%s)"
+    IDS_RESTART             "You have to restart roboServ zo take the changes into effect."
+    IDS_REALLYSTOP          "Do you really want to stop the room?"
+    IDS_ROOMINVISIBLE       "Room not visible on the WPN!"
+    IDS_ROOMNOWVIS          "Room now visible on the WPN :-)"
+    IDS_WELCOME1            "Welcome to %s\r\nType help for a list of available commands\r\n"
+    IDS_WELCOME2            "<Use Page UP/Page Down to scroll through available commands>"
+    IDS_RENAMEMSG           "%s is now known as %s"
+    IDS_ERROR_PORT          "Port 6699 is reserved for WPN Listing functionality."
+    IDS_ERROR_ROOMLENGTH    "Roomname too long. Maximum lenght is 40 characters."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_MENUBAR         "Show or hide the menubar\nToggle MenuBar"
+    ID_VIEW_LIKE_OFFICE_2K  "UI look 2K\nUI look 2K"
+    ID_VIEW_LIKE_OFFICE_XP  "UI look XP\nUI look XP"
+    ID_VIEW_COLOR_CONTROLS  "Display color controls in active view\nToggle color controls"
+    ID_VIEW_RESIZABLE_BAR_0 "Show or hide the command  bar\nToggle command bar"
+    ID_VIEW_RESIZABLE_BAR_1 "Show or hide the userlist\nToggle userlist"
+    ID_VIEW_RESIZABLE_BAR_2 "Show or hide the settings bar\nToggle quick settings bar"
+    ID_EXIT                 "Disconnect from channel\nDisconnect"
+    ID_CHANNEL_CHANNELLIST  "Connects to WPN and downloads a list of all available Chat-Channels\nGet Channellist"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_RESIZABLE_BAR_4 "Agents may use /impose <username> <message>"
+    ID_RENAME               "Remove agent status"
+    ID_VIEW_OPTIONS         "Copy IP to clipboard"
+    ID_MYFILE_NEW           "Give user a voice. This is only effective in moderated channels"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_LIKE_OFFICE_2003 "UI look 2003\nUI look 2003"
+    ID_USERLIST_COPYUSERNAME "Copy the username to clipboard"
+    ID_USERLIST_ADDADMIN    "Give user adminrights. Admins may kick/ban users and change channgel settings"
+    ID_USERLIST_REMOVEADMIN "Remove Adminrights from user"
+    ID_USERLIST_UNBAN       "Unban the user"
+    ID_USERLIST_PRINTUSERSTAT "Print user statistics"
+    ID_USERLIST_PRINTIP     "Prints users IP Address"
+    ID_USERLIST_IGNORE      "Ignore user"
+    ID_USERLIST_UNIGNORE    "Unignore user"
+    ID_USERLIST_CUSTOMIZETHISMENU "Customize the menu commands for this room"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_USERLIST_SENDMESSAGE "Muzzle a user. This only works in moderated channels."
+    ID_USERLIST_KICK        "Hidden users do not appear on the userlist"
+    ID_USERLIST_KICKBAN     "Show user on the userlist"
+    ID_USERLIST_BAN         "Save configuration and bans of the server\nSave Configuration"
+    ID_USERLIST_REDIRECT    "Redirect the user"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_USERLIST_READUSERMESSAGE "Read user message"
+    ID_CHATROOM_CLEARSCREEN "Clear all text"
+    ID_CHATROOM_COPYROOMNAME "Copy the roomname to clipboard"
+    ID_NEXT                 "Next Window\nNext Window"
+    ID_PREV                 "Switch to previous Window\nPrevious Window"
+    ID_RECONNECT            "Reconnect to channel\nReconnect to channel"
+    IDR_START_NODESERVER    "Start Server console to create a server or to host a chatroom\nStart Serverconsole"
+    ID_VIEW_FULL_SCREEN     "Toggles Full Screen mode on/off"
+    ID_CHATROOM_DISPLAYINCHANNEL_SYSTEMUPTIME 
+                            "Display how long your Windows has been running in channel\nSystem Uptime"
+    ID_CHATROOM_DISPLAYINCHANNEL_SYSTEMINFO 
+                            "Display Information about your Windows and Computer in the channel\nSystem Info"
+    ID_CHATROOM_DISPLAYINCHANNEL_AVERAGELAG 
+                            "Displays the average Lag between what you type and when you see it in the channel\nAverage Lag"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_CHANNELBAR      "Show or hide the channelbar\nToggle Channel Bar"
+    ID_CHATROOM_ASCIIARTDESIGN 
+                            "Opens a dialog where you can edit ASCII art pictures in and then paste it into the channel"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_POPUP_LOOPBACKJOIN   "Quick join without adjusting user details"
+    ID_POPUP_COPYROOMNAME   "Copy the room name"
+    ID_POPUP_COPYTOPIC      "Copies the room topic"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_LOGFILE         "View Channel Logfile"
+    ID_CHATROOM_REJOIN      "Rejoin the channel"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ERROR_CONNECTING    "Error. roboServ was unable to establish a connection to %s. [%s]"
+    IDS_HANDSHAKE_START     "Starting handshake"
+    IDS_ERROR_LOGIN_UNKNOWN "Crucial Halt - Hang on, WHAT was that?"
+    IDS_ERROR_LOGIN_KEY     "Error during key-exchange"
+    IDS_ERROR_NO_CHATSERVER "Error. No chat server is running on the address specified."
+    IDS_ERROR_NETWORK       "A network operation failed. %s"
+    IDS_ERROR_LOGIN_REJECTED "Login rejected :("
+    IDS_LOGIN_OK            "Login granted :)"
+    IDS_ERROR_FIXME         "Fixme: Unexpected stream state or unknown packet: '%s'"
+    IDS_CONNECTING          "Connecting. Stand by..."
+    IDS_SERVER_RCMS         "Info: Room supports RCMS command set."
+    IDS_SERVER_WINMX353     "Info: Room uses WinMX 3.5x protocol"
+    IDS_WINMX353_WRONGJOIN_WARNING 
+                            "Warning: You used the MXChatd compatible join method to enter this room. To enjoy the full potential of the new chatroom engine, please join normally :)"
+    IDS_ERROR_LOGFILE_OPEN  "Error: Could not open logfile."
+    IDS_REDIRECTING         "Redirecting to %s"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ERROR_REDIRECT_ROOMNAMEINVALID 
+                            "%s does not appear to be a valid room name. Redirect aborted."
+    IDS_ROOMRENAME          "Roomname changed from %s to %s"
+    IDS_FIXME_NAME_ERROR    "Fix-me: Could not find user %s"
+    IDS_FIXME_UNKNOWN_COMMAND "Fixme: Unknown Command 0x%X len=%d cmd=%s"
+    IDS_RTF_BLOCK           "Sorry, I made a futile attemp to send an RTF exploit to the room. roboServ outsmarted me though and blocked it. Please kick my butt!"
+    IDS_EDIT_MENU           "roboServ will now open the a configuration file in notepad. Please adjust the RCMS commands to the one used in this room, save the document and re-join the channel. Do not change the order of the commands in the file."
+    IDS_USERS               "%03d users"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ERROR_TIMEOUT       "The connection timed out."
+    IDS_ERROR_INVALID_SOCKET "Invalid Socket."
+    IDS_ERROR_UNKNOWN_ID    "Sorry, the error number 0x%08x is unknown (%d)"
+    IDS_PM_AWAY             "I am currently afk, %s."
+    IDS_WPN_CONNECTING      "WPN Connecting..."
+    IDS_ERROR_COMCTRL       "Could not initialzie Common Controls."
+    IDS_WPN_CONNECTED       "WPN Connected."
+    IDS_ERROR_WINSOCK       "Could not initialize Winsock."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_TOPIC2              "Topic"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ERROR_ROOMNAME_EMPTY "Roomname must not be emtpy!"
+    IDS_ERROR_ROOMNAME_INVALID "Roomname does not appear to be valid!"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_TOPIC               "Topic: %s"
+    IDS_SERVER_FILTER       "Server Configuration Files (*.rsi)|*.rsi|All Files (*.*)|*.*||"
+    IDS_ROOMS_ETA           "%04d Rooms (ETA: %s, %s, %s)"
+    IDS_CHANNELLIST         "Channel List"
+    IDS_TOOL_JOINVARIABLES  "You may use following variables here:\n\n%NAME%, %RAWNAME%, %IP%, %HOSTNAME%, %FILES%, %LINE%\n%USERS% %ROOMNAME% %TIME% %DATE% %ROBOMX%"
+    IDS_PING                "Ping server: bytes=%d time %sms TTL=%d"
+    IDS_CLIENTDISC          "Client closed."
+    IDS_SERVER_ROBOMX       "Info: Room supports RoboMX protocol extensions."
+    IDS_ROBOMX_ROOMSERVER   "roboServ Roomserver\nType help for available commands...\n"
+    IDS_ERROR_SERVER_ONEROOMPERCONSOLE 
+                            "You can only host one room per console.\n"
+    IDS_ERROR_SERVER_SYNTAXERROR 
+                            "Syntax Error or one Parameter is invalid. Correct call is:\nhost <IP> <PORT> <ROOM>\n"
+    IDS_SERVER_SUCCESS      "Room '%s' was successfully hosted\n"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_FINISHED            "Finished."
+    IDS_BANLISTING          "%s [%s/%s]"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_BANLISTINGEND       "Ban-listing complete."
+    IDS_COMMAND_NOTUNDERSTOOD 
+                            "Command '%s' not understood. Type Help for available commands\n\n"
+    IDS_MODES               "Channel Modes"
+    IDS_ERROR_SERVER_KEYEXISTS "Key already set for this channel."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ERROR_SERVER_NOKEY  "No Key set for this channel."
+    IDS_USERMODES           "Modes for %s: %s"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ERROR_PERMISSIONDENIED_SEND "You do not have permission to use '%s'"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ERROR_SERVER_HOST   "Error: Could not host room'%s'\n"
+    IDS_SERVER_TERMINATED   "Room '%s' was terminated\n"
+    IDS_ERROR_SERVER_NOROOM "No room to stop.\n"
+    IDS_ERROR_CMDEMPTY      "Empty command string. Type Help for available commands\n"
+    IDS_ERROR_NOTUNDERSTOOD " Command '%s' not understood. Type Help for available commands\n"
+    IDS_SERVER_HELP         "\nAvailable Commands:\nhost <IP> <PORT> <ROOM> - Host a new room\nredirect <TARGET-ROOM> - Redirect users and stop room\nchannelname <NAME> - change channelname to <NAME>\nstop   - Stop currently hosted room\n/topic <topic> - Set channel topic\n/motd <motd> - Set channel motd\n/kick <user> [reason] - Kick a user\n/exile <user> <target-room> [reason] - Send a user to a room\n/listbans -list all banned users/IP's/hostnames\n/say [/me] <msg> - Send a message to the room with the name of the God-User\n/impose <name> [/me] <message> - Send a message to the room using any name\nFor a complete list of available commands read commands.txt."
+    IDS_ERROR_SERVER_HANDSHAKE 
+                            "\nHandshake with incoming client [%s %s/%s] failed"
+    IDS_WARN_USERNAMEHIJACK "Username HiJack blocked [%s %s]"
+    IDS_SERVER_SETMODE      "sets mode: %s"
+    IDS_SERVER_KICKED       "has been kicked by %s (%s)"
+    IDS_DEFAULT_TOPIC       "Powered by roboServ (http://mxcontrol.sf.net)"
+    IDS_DEFAULT_MOTD        "This room is hosted by roboServ\\nhttp://mxcontrol.sf.net"
+    IDS_DEFAULT_KEYMSG      "\n\nThis channel is password protected.\nPlease enter the password now\n\n"
+    IDS_NOSUCHBAN           "'%s' not found in ban-list."
+    IDS_SERVER_UNBAN        "/unban %s [%s/%s]"
+    IDS_BANLISTINGSTART     "Banned users in this channel:"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_ROBOMX_OPENSERVERCONFIGURATION 
+                            "Load Settings from a roboServ Configuration file"
+    ID_ROBOMX_SAVESERVERCONFIGURATION 
+                            "Save current room configuration to a file"
+    ID_VIEW_IGNOREDUSERS    "Display/Edit Ignored &Users"
+    ID_VIEW_TRUSTEDUSERS    "Display/Edit Trusted Users"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_HIDDENLISTINGSTART  "List of hidden users:"
+    IDS_HIDDENLISTINGEND    "Hidden User-Listing complete."
+    IDS_HIDDENLISTING       "+h: %s"
+    IDS_ERROR_COM           "Error intializing Com Interface. The application will terminate now,"
+    IDS_CHANNELSTATS1       "Channel Statistics for %s"
+    IDS_CHANNELSTATS2       "+ Joined at %s\n+ %u users\n+ %u Messages Total\n+ %u Messages by you (%d%%)\n+ Lurkmeter: %s\n+ Messages/Second: %.02f\n+ Host is %s\n+ on %s\n"
+    IDS_CHANNELSTATS3       "End of Statistics\n"
+    IDS_LURKMETER           "Lurkmeter: %s"
+    IDS_LURKMETER1          "%f nL"
+    IDS_LURKMETER2          "(infinite) nL"
+    IDS_CLIENTDISC2         "Client closed."
+    IDS_CLIENTDISC3         "Client closed."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_HELP_VISITHOMEPAGE   "Open roboServ Homepage in your default Browser\nVisit Homepage"
+    ID_HOSTCHANNEL          "Host channel on this ip, port and name\nStart channel"
+    ID_STOPCHANNEL          "Stop the currently hosted channel\\Stop channel"
+    ID_ROOMNAMEBOX          "Enter roomname here\nRoomname"
+    ID_ROOMIP               "IP for the room\nIP"
+    ID_ROOMPORT             "Port of the room\nPort"
+    ID_USERLIST_STATISTICS  "Display statistics for this user\nStatistics"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_USERLIST_USERMODES   "Display usermodes of this user\nUsermodes"
+    ID_HELP_COMMANDHELP     "Display the command help\nCommand Help"
+    ID_LANGSWITCHER         "Switch the language\nLanguage"
+    ID_VIEW_TOOLBARS_LANGUAGEBAR 
+                            "Show/hide the language bar\nShow/hide the language bar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_EXITQUESTION        "You are currently hosting a channel.\nDo you really want to quit roboServ?"
+    IDS_USERNAME            "Username"
+    IDS_USERMODE            "Modes"
+    IDS_USERIP              "IP"
+    IDS_USERCLIENT          "Client"
+    IDS_USERFILES           "Files"
+    IDS_USERLINE            "Line"
+    IDS_USERLIST            "Userlist"
+    IDS_COMMANDBAR          "Command Input"
+    IDS_ROOMPORT            "Room Port"
+    IDS_ROOMIP              "Room IP"
+    IDS_ROOMNAME            "Roomname"
+    IDS_HOSTBAR             "Hostbar"
+    IDS_VIS                 "Visual Styles"
+    IDS_TOOLBAR             "ToolBar"
+    IDS_LANGUAGE            "Language"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SERVER_STATS        "Server Statistics:"
+    IDS_SERVER_UPTIME       "Channel is running since %s, %s"
+    IDS_SERVER_CLIENTS      "Total number of clients: %d"
+    IDS_SERVER_MX331        " + WinMX 3.3x (or compatible): %d (%.2f%%)"
+    IDS_SERVER_MX353        " + WinMX 3.5x (or compatible): %d (%.2f%%)"
+    IDS_SERVER_IPCLIENT     " + RoboMX / Rabbit  (IPClient 1.0, deprecated): %d (%.2f%%)"
+    IDS_SERVER_RMX          " + RoboMX: %d (%.2f%%)"
+    IDS_SERVER_RABBIT       " + Rabbit: %d (%.2f%%)"
+    IDS_SERVER_OTHER        " + Other: %d (%.2f%%)"
+    IDS_SERVER_JOINS        "Total number of joins: %d"
+    IDS_SERVER_JOINSFAILED  "Number of failed joins: %d"
+    IDS_SERVER_MSGS         "Number of processed messages: %d"
+    IDS_SERVER_STATSEND     "End of statistics."
+    IDS_USERSTATS           "%s: Client: %s %s. Hostname: %s. Joined at %s %s as %s. %d messages."
+    IDS_USERHOSTNAME        "Hostname"
+    IDS_FLOODBLOCK          "%s has been kicked because of message- or namechange-flooding"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

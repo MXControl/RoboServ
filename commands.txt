@@ -1,0 +1,227 @@
+___________________________________________________
+                              __                   
+                /           /    )                 
+---)__----__---/__----__----\--------__---)__------
+  /   ) /   ) /   ) /   )    \     /___) /   ) | / 
+_/_____(___/_(___/_(___/_(____/___(___ _/______|/__
+
+                     www
+                    (o o)                  
+-----------------ooO-(_)-Ooo-------------------
+
+roboServ 1.1 has been created by Thees Schwab.
+Check http://mxcontrol.sourceforge.net for up-
+dates.
+
+Thanks to Nushi@2Sen (http://2sen.dip.jp)
+and to King Marco (http://www.kingmarco.net)
+-----------------------------------------------
+
++ Index:
+++++++++
+
+1) Basics
+2) Advanced commands
+3) Host commands
+4) Variables for topic, motd, welcomemessage
+5) Colors
+
++ Command Help:
++++++++++++++++
+
+parameters enclosed with <> are mandatory,
+parameters enclosed with [] are optional.
+
+NOTE FOR WinMX 3.3x users:
+in order to use commands replace the / with #
+(example: #login <password>
+
++ 1) Basics:
+++++++++++++
+
+/commands
+(displays list of available commands)
+
+/channelname
+(display name of the channel)
+
+/private <user> <msg>
+(Send a message to <user> (Full or part of username))
+
+/admin <user>
+(make user an admin)
+
+/remadmin <user>
+(remove admin status from user)
+
+/login <password>
+(login as admin or voiced user)
+(password can only be set via userinterface by the host)
+
+/kick <user> [reason]
+/kickban <user> [reason]
+/ban <user>
+/uban <user>
+
+/enableexile <targetroom>
+(enable the exil and exileto commands. Agents only)
+
+/disableexile
+(disbale the /exile and /exilto commands. Agents only)
+
+/exile <user> [reason]
+(exile a user)
+
+/exileto <user> <targetroom> [reason]
+(exile a user to a specific room)
+
+/listbans
+(list all banned users)
+
+/topic <topic>
+(set topic)
+
+/setmotd <motd>
+(set message of the day)
+
+/limit <limit>
+(set userlimit)
+
+/stat [user]
+(display channelstatistics or userstatistics if [user] is specified)
+
+/createchannel <name>
+(create a subchannel with the name <name>
+
+/join <subchannel>
+(join the subchannel <subchannel>)
+
+/closechannel <subchanne>
+(close the subchannel <subchannel>)
+
+/part
+/join main
+(Redirects you back to the mainchannel if you are in a subchannel)
+
+/listchannels
+(list all subchannels)
+
+/opmsg <msg>
+send message to operators
+
+/me <msg>
+/action <msg>
+/emote <msg>
+
+
++ 2) Advanced commands:
++++++++++++++++++++++++
+
+/hideid
+(hide the user id)
+
+/showid
+(show the user id)
+
+/setmoderated
+(channel is moderated, only voiced users and admins can talk)
+
+/remmoderated
+(disable moderation)
+
+/voice <user>
+(give user a voice in a moderated channel)
+
+/muzzle <user>
+(muzzle user, muzzled users can not talk in a moderated channel)
+
+/setpassword <password>
+(set a password for the channel)
+
+/rempassword
+(disable password)
+
+/channelmodes
+(display channelsettings)
+
+/usermodes <user>
+/usermode <user>
+(display usermodes)
+
+/listhidden
+(list all hidden users)
+
+/hide <user>
+(hide user, hidden users do not appear onthe channellist)
+
+/show
+(show a hidden user again)
+
+/agent <user>
+(make user an agent, may use /impose)
+
+/remagent <user>
+(remove agent)
+
+/impose <fakeuser> [/me] <msg>
+(send a message with fakeusername to the room, only agents may use this)
+
+/disablecolors
+(disable colors for yourself (per user setting))
+(This does not apply to the entire channel!)
+
+/enablecolors
+(enable colors for yourself (per user setting))
+(This does not apply to the entire channel!)
+
+#\r\n# or \n
+(Newline in messages, agents only)
+
++ 3) Host commands
+++++++++++++++++++
+
+these command can only be entered on by the host in the servershell
+
+host <IP> <Port> <roomname>
+(host a room on IP, Port with <roomname>)
+
+stop
+(stop the currently hosted room)
+
+redirect <targetroom>
+(redirect all users to <targetroom> and stop the room)
+
+channelname <newname>
+(change the channelname)
+
+
++ 4) List of variables you may use in the
++ topic, motd and welcome message
+++++++++++++++++++++++++++++++++++++++++++
+
+%ROOMNAME%  - name of your room
+%NAME%      - name of the user that entered last/is currently entering
+%IP%		- Ip of the user
+%HOSTNAME%  - hostname of the user
+%CLIENT%	- client name of the user
+%CLIENTVER% - version of the client
+%USERS%     - number of users in your channel
+%TIME%		- your localtime in 24h format
+%DATE%		- date
+%WA-SONG%	- song currently playing in your winamp (2.x or 5.x)
+%WA-ARTIST%	- artist of the song currently playing in your winamp (2.x or 5.x)
+
++ 5) Color support
+++++++++++++++++++
+
+Roboserv supports colored text in the chatroom for WinMX 3.53 
+compatible clients. There are 40 colors (depending on the client)
+#c1# to #c40#.
+You may use them in the username, message and actions
+If you dont want to see colors for yourself, type /disablecolors
+This is recommended for bots.
+/enablecolors will enable them again.
+The host can deactivate colors for the entire room via the quick-
+config bar.
+
+# end of file #

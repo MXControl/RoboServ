@@ -1,0 +1,1148 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS MOVEABLE PURE 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "Comments", "Deutsches Sprachmodul für roboServe 1.1\0"
+            VALUE "CompanyName", "http://mxcontrol.sf.net\0"
+            VALUE "FileDescription", "Roomserver for WinMX\0"
+            VALUE "FileVersion", "1.1.0.0\0"
+            VALUE "InternalName", "roboServ.exe\0"
+            VALUE "LegalCopyright", "(c) Bender, Nushi, KM.  All rights reserved.\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "roboServ.exe\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "roboServ\0"
+            VALUE "ProductVersion", "1.0.0.1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 207, 218
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "roboServe - Connecting people...."
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,78,198,50,14
+    LTEXT           "roboServe v1.1 (c) 2001-2005 by the contributors",
+                    IDC_STATIC_1,10,60,170,9
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,10,98,191,1
+    LTEXT           "Hauptentwickler, Management: Thees Schwab",IDC_STATIC_3,
+                    10,103,150,8
+    LTEXT           "Besonderer Dank geht an folgende Leute:",IDC_STATIC_4,
+                    10,116,134,8
+    LTEXT           "[Nushi]@[2Sen]",IDC_STATIC_5,10,128,51,8
+    LTEXT           "King Macro",IDC_STATIC_6,10,142,37,8
+    LTEXT           "Zhen-Xlogic",IDC_STATIC_7,10,157,39,8
+    PUSHBUTTON      "http://2sen.dip.jp/",IDC_NUSHI_URL,66,126,104,12
+    PUSHBUTTON      "http://www.kingmacro.net/",IDC_KM_URL,66,140,104,12
+    PUSHBUTTON      "http://mxcontrolgreece.sf.net/",IDC_ZHEN_URL,66,155,104,
+                    12
+    LTEXT           "roboServe wurde Ihnen gebracht von",IDC_STATIC_2,10,72,
+                    119,8
+    PUSHBUTTON      "http://mxcontrol.sourceforge.net/",IDC_MXCONTROL_URL,10,
+                    82,170,12
+    CONTROL         355,IDC_STATIC,"Static",SS_BITMAP,0,0,219,55
+    PUSHBUTTON      "GUI erstellt mit Prof-UIS Userinterface Library",
+                    IDC_PROFS_UI,10,170,170,12
+END
+
+IDD_IN_BAR_DLG DIALOG DISCARDABLE  0, 0, 206, 249
+STYLE DS_FIXEDSYS | WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS | WS_CAPTION
+CAPTION "Hauotraum"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "&Raum ist sichtbar",1008,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,4,192,10
+    COMBOBOX        IDC_COLOR_PERMISSION,7,16,192,115,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Thema",IDC_STATIC,7,31,23,8
+    EDITTEXT        1013,7,40,192,14,ES_AUTOHSCROLL
+    LTEXT           "&Motd",IDC_STATIC,7,56,20,8
+    EDITTEXT        1009,7,65,192,31,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | ES_WANTRETURN
+    LTEXT           "&Passwort Nachricht",IDC_STATIC,7,98,62,8
+    EDITTEXT        1007,7,107,192,28,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | ES_WANTRETURN
+    LTEXT           "Raumpass&wort",IDC_STATIC_PW,7,143,48,8
+    EDITTEXT        IDC_PASSWORD,68,140,131,14,ES_AUTOHSCROLL
+    LTEXT           "Willkommens &Nachricht",IDC_STATIC,5,155,75,8
+    EDITTEXT        1016,7,164,192,14,ES_AUTOHSCROLL
+    LTEXT           "&Gott Nutzer",IDC_STATIC,7,187,49,8
+    EDITTEXT        1006,63,184,136,14,ES_AUTOHSCROLL
+    CONTROL         "Gott Nutzer ist im Raum sichtbar",1014,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,201,118,10
+    COMBOBOX        1005,7,213,90,86,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    EDITTEXT        1004,109,212,90,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "Sichern",IDOK,95,228,50,14
+    PUSHBUTTON      "Abbrechen",IDCANCEL,149,228,50,14
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,29,35,174,1
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,31,59,168,1
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,73,102,126,1
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,74,159,125,1
+END
+
+IDD_LOGIN_CFG DIALOG DISCARDABLE  0, 0, 208, 250
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Logins"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Passwort:",IDC_STATIC,11,20,42,8
+    EDITTEXT        IDC_PASSWORD,56,17,140,14,ES_AUTOHSCROLL
+    LTEXT           "Nutzerrechte, die mit dem Login verbunden sind",
+                    IDC_STATIC,10,34,151,8
+    CONTROL         "+ &Stimme",IDC_VOICE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,10,46,45,10
+    CONTROL         "@ &Admin",IDC_ADMIN,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,74,46,45,10
+    CONTROL         "# A&gent",IDC_AGENT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,139,46,41,10
+    LTEXT           "Dieser Login ist gültig in",IDC_STATIC,10,60,75,8
+    CONTROL         "&Hauptraum",IDC_VALID_MAIN,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,10,73,51,10
+    CONTROL         "&Unterraum",IDC_VALID_SUB,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,73,73,49,10
+    PUSHBUTTON      "Hinzu&fügen",IDC_ADD,139,71,50,14
+    PUSHBUTTON      "&Bearbeiten",IDC_EDIT,10,183,50,14
+    PUSHBUTTON      "&Löschen",IDC_DELETE,74,183,50,14
+    LTEXT           "... Login",IDC_STATIC,139,186,26,8
+    CONTROL         "List1",IDC_LOGINS,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SORTASCENDING | 
+                    LVS_NOLABELWRAP | LVS_NOSORTHEADER | WS_BORDER | 
+                    WS_TABSTOP,10,105,186,74
+    LTEXT           "Standardrechte",IDC_STATIC,4,212,50,8
+    CONTROL         "+ S&timme",IDC_VOICE_DEFAULT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,58,211,45,10
+    CONTROL         "@ Adm&in",IDC_ADMIN_DEFAULT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,104,211,45,10
+    CONTROL         "&# Agent",IDC_AGENT_DEFAULT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,160,211,41,10
+    PUSHBUTTON      "Sichern",IDOK,99,229,50,14
+    PUSHBUTTON      "Abbrechen",IDCANCEL,151,229,50,14
+    GROUPBOX        "Login hinzufügen / bearbeiten",IDC_STATIC_A,4,7,197,82
+    GROUPBOX        "Logins:",IDC_STATIC_B,4,93,197,110
+END
+
+IDD_MISC DIALOG DISCARDABLE  0, 0, 205, 250
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Erweitert"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "[roSe] in Thema anzeigen",IDC_ADVERTISE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,17,180,10
+    CONTROL         "&Raum ist moderiert (Nur Nutzer mit Stimme kann Chatten",
+                    IDC_MODERATED,"Button",BS_AUTOCHECKBOX | BS_MULTILINE | 
+                    WS_TABSTOP,10,28,180,16
+    LTEXT           "Wählen Sie, welches Zeichen Nutzer vorm Namen haben",
+                    IDC_STATIC_F,10,45,182,8,NOT WS_GROUP
+    LTEXT           "Normaler Nutzer",IDC_STATIC_G,10,55,58,8,NOT WS_GROUP
+    CONTROL         "Keins",IDC_NO_NORMAL,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,72,54,38,10
+    CONTROL         "+",IDC_PLUS_NORMAL,"Button",BS_AUTORADIOBUTTON,114,54,
+                    27,10
+    CONTROL         "@",IDC_AT_NORMAL,"Button",BS_AUTORADIOBUTTON | WS_GROUP,
+                    146,54,32,10
+    LTEXT           "Nutzer m. Stimme",IDC_STATIC_H,10,69,58,8,NOT WS_GROUP
+    CONTROL         "Keins",IDC_NO_VOICE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,72,68,38,10
+    CONTROL         "+",IDC_PLUS_VOICE,"Button",BS_AUTORADIOBUTTON,114,68,27,
+                    10
+    CONTROL         "@",IDC_AT_VOICE,"Button",BS_AUTORADIOBUTTON | WS_GROUP,
+                    146,68,32,10
+    LTEXT           "Admins",IDC_STATIC_I,10,81,58,8,NOT WS_GROUP
+    CONTROL         "Keins",IDC_NO_ADMIN,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,72,80,38,10
+    CONTROL         "+",IDC_PLUS_ADMIN,"Button",BS_AUTORADIOBUTTON,114,80,27,
+                    10
+    CONTROL         "@",IDC_AT_ADMIN,"Button",BS_AUTORADIOBUTTON | WS_GROUP,
+                    146,80,32,10
+    LTEXT           "Agenten",IDC_STATIC_J,10,92,58,8,NOT WS_GROUP
+    CONTROL         "Keins",IDC_NO_AGENT,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,72,91,38,10
+    CONTROL         "+",IDC_PLUS_AGENT,"Button",BS_AUTORADIOBUTTON,114,91,27,
+                    10
+    CONTROL         "@",IDC_AT_AGENT,"Button",BS_AUTORADIOBUTTON | WS_GROUP,
+                    146,91,32,10
+    CONTROL         "&Localhost (127.0.0.1)  ist immer Admin",1001,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,123,180,10
+    LTEXT           "Nutzer, die + vorm Namen sehen dürfen",IDC_STATIC_A,10,
+                    138,180,8,NOT WS_GROUP
+    COMBOBOX        IDC_VOICE_WATCH,10,148,180,83,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Nutzer, die @ vorm Namen sehen dürfen",IDC_STATIC_B,10,
+                    162,173,8,NOT WS_GROUP
+    COMBOBOX        IDC_ADMIN_WATCH,10,170,180,76,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Erlaube mehrere Verbindungen von der gleichen IP",1011,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,201,180,10
+    CONTROL         "&Blocke NushiChat und WinMX 3.3x",1002,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,212,180,10
+    PUSHBUTTON      "Sichern",IDOK,95,229,50,14
+    PUSHBUTTON      "Abbrechen",IDCANCEL,148,229,50,14
+    GROUPBOX        "Erweiterte Raumeinstellungen",IDC_STATIC_E,7,7,191,101
+    GROUPBOX        "Rechte",IDC_STATIC_D,7,109,191,81
+    GROUPBOX        "Sicherheit",IDC_STATIC_C,7,191,191,37
+END
+
+IDD_OPENCONFIG DIALOG DISCARDABLE  0, 0, 261, 82
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Öffnen"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDI_QUESTION_ICON,IDC_STATIC,7,7,20,20
+    LTEXT           "Geben Sie den Pfad oder die Internetadresse der Konfigurations- datei, die Sie öffnen möchten ein, oder klicken Sie auf ""Durchsuchen"".",
+                    IDC_STATIC_1,39,7,215,25
+    LTEXT           "&Öffnen:",IDC_STATIC,7,38,26,8
+    EDITTEXT        IDC_URL,38,35,216,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,97,61,50,14,WS_DISABLED
+    PUSHBUTTON      "&Durchsuchen",IDC_BROWSE,204,61,50,14
+    PUSHBUTTON      "Abbrechen",IDCANCEL,150,61,50,14
+END
+
+IDD_SUBCHANNELS_CFG DIALOG DISCARDABLE  0, 0, 206, 249
+STYLE DS_FIXEDSYS | WS_CHILD | WS_VISIBLE | WS_CAPTION
+CAPTION "Unterräume"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "&Aktiviere Unterräume",IDC_ENABLE_SUBS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,4,192,10
+    LTEXT           "&Nutzer die einen Unterraum öffnen dürfen",IDC_STATIC_A,
+                    7,16,131,8
+    COMBOBOX        IDC_SUB_CREATE_LEVEL,7,26,192,146,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "&Leere Unterräume automatisch schließen",IDC_AUTOCLOSE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,41,184,10
+    CONTROL         "&Begrenze Zahl der Unterräume auf",
+                    IDC_LIMIT_NUMBER_SUBS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,57,125,10
+    EDITTEXT        IDC_MAX_SUBS,126,55,73,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "&Zeige Unterräume im Hauptserverfenster an",
+                    IDC_DISPLAY_MESSAGES,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,73,192,10
+    CONTROL         "Erster Nutzer, der leeren Unterraum betritt ist Supernutzer (Stimme+Admin+Agent)",
+                    IDC_SUB_FIRSTISSUPER,"Button",BS_AUTOCHECKBOX | 
+                    BS_MULTILINE | WS_TABSTOP,7,87,192,17
+    CONTROL         "Unterräume erscheinen auf &WPN Raumliste (Begrenzt auf 5 Räume, Hauptraum muß sichtbar sein!)",
+                    IDC_SUBLIST,"Button",BS_AUTOCHECKBOX | BS_MULTILINE | 
+                    WS_TABSTOP,7,108,192,21
+    DEFPUSHBUTTON   "Sichern",IDOK,95,228,50,14
+    PUSHBUTTON      "Abbrechen",IDCANCEL,149,228,50,14
+END
+
+IDD_UPDATE DIALOG DISCARDABLE  0, 0, 344, 192
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "roboServe Autoupdate"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Update Details",IDC_STATIC_1,7,7,330,114
+    EDITTEXT        IDC_UPDATE_DETAILS,14,17,317,97,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | 
+                    ES_WANTRETURN
+    GROUPBOX        "Update Fortschritt",IDC_STATIC_2,7,124,330,43
+    LTEXT           "0%",IDC_STATIC_3,14,141,10,8
+    CONTROL         "Progress1",IDC_UPDATE_PROGRESS,"msctls_progress32",
+                    WS_BORDER,27,138,284,14
+    LTEXT           "100%",IDC_STATIC_4,313,141,18,8
+    DEFPUSHBUTTON   "&Neustart",IDOK,123,171,50,14,WS_DISABLED
+    PUSHBUTTON      "Abbrechen",IDCANCEL,180,171,50,14,WS_DISABLED
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BOX_IMAGES_XP_BLUE  BITMAP  DISCARDABLE     "res\\checkbox_xp_blue.bmp"
+IDB_RADIOBOX_IMAGES_XP_BLUE BITMAP  DISCARDABLE     "res\\radiobox_xp_blue.bmp"
+IDB_ROBOSERV            BITMAP  DISCARDABLE     "res\\roboserv.bmp"
+IDR_HOSTBAR             BITMAP  DISCARDABLE     "res\\bmp00001.bmp"
+IDR_LANGBAR             BITMAP  DISCARDABLE     "res\\bmp00002.bmp"
+IDR_MAINFRAME           BITMAP  MOVEABLE PURE   "res\\Toolbar.bmp"
+IDR_TOOLBAR2            BITMAP  DISCARDABLE     "res\\toolbar1.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\roboServ.ico"
+IDI_QUESTION_ICON       ICON    DISCARDABLE     "res\\question.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU DISCARDABLE 
+BEGIN
+    POPUP "&Datei"
+    BEGIN
+        MENUITEM "&Öffnen...\tStrg+O",          ID_FILE_OPEN
+        MENUITEM "&Speichern\tStrg+S",          ID_FILE_SAVECFG
+        MENUITEM SEPARATOR
+        MENUITEM "Kopiere &Raumnamen",          ID_FILE_COPYCHANNELNAME
+        MENUITEM "Kopiere &Loopbacknamen",      ID_FILE_COPYLOOPBACKNAME
+        MENUITEM SEPARATOR
+        MENUITEM "&Beenden",                    ID_APP_EXIT
+    END
+    POPUP "&Ansicht"
+    BEGIN
+        POPUP "&Werkzeugleisten"
+        BEGIN
+            MENUITEM "&Menüleiste",                 ID_VIEW_MENUBAR
+            MENUITEM "&Werkzeugleiste",             ID_VIEW_TOOLBAR
+            MENUITEM "Hostleiste",                  IDR_HOSTBAR
+            MENUITEM "&Visuelle Stile",             IDR_TOOLBAR2
+            MENUITEM "&Sprachenleiste",             IDR_LANGBAR
+        END
+        MENUITEM "&Kommandoleiste",             ID_VIEW_RESIZABLE_BAR_0
+        MENUITEM "&Benutzerliste",              ID_VIEW_RESIZABLE_BAR_1
+        MENUITEM "&Einstellungen",              ID_VIEW_RESIZABLE_BAR_2
+        MENUITEM SEPARATOR
+        MENUITEM "Office &2K Stil",             ID_VIEW_LIKE_OFFICE_2K
+        MENUITEM "Office &XP Stil",             ID_VIEW_LIKE_OFFICE_XP
+        MENUITEM "Office 200&3 Stil",           ID_VIEW_LIKE_OFFICE_2003
+        MENUITEM "VS 200&5 Stil",               ID_VIEW_LIKE_STUDIO_2005
+    END
+    POPUP "&Nutzer"
+    BEGIN
+        MENUITEM "Adminrechte geben",           ID_USERLIST_ADDADMIN
+        MENUITEM "Adminrechte entziehen",       ID_USERLIST_REMOVEADMIN
+        MENUITEM SEPARATOR
+        MENUITEM "Stimme geben",                ID_USERLIST_GIVEVOICE
+        MENUITEM "Knebeln",                     ID_USERLIST_REMOVEVOICE
+        MENUITEM SEPARATOR
+        MENUITEM "Agentenrechte geben",         ID_USERLIST_ADDAGENT
+        MENUITEM "Agentenrechte entziehen",     ID_USERLIST_REMOVEAGENT
+        MENUITEM SEPARATOR
+        MENUITEM "&Rausschmeißen",              ID_USERLIST_KICK
+        MENUITEM "Raumschmeißen und verbannen", ID_USERLIST_KICKBAN
+        MENUITEM "Verbannen",                   ID_USERLIST_BAN
+        MENUITEM SEPARATOR
+        MENUITEM "Namen kopieren",              ID_USERLIST_COPYUSERNAME
+        POPUP "Erweitert"
+        BEGIN
+            MENUITEM "IP kopieren",                 ID_USERLIST_COPYIP
+            MENUITEM SEPARATOR
+            MENUITEM "Unsichtbar",                  ID_USERLIST_HIDE
+            MENUITEM "Sichtbar",                    ID_USERLIST_SHOW
+            MENUITEM SEPARATOR
+            MENUITEM "Ghost entfernen",             ID_USERLIST_REMOVEGHOST
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Statistik anzeigen",          ID_USERLIST_STATISTICS
+        MENUITEM "Benutzerrechte anzeigen",     ID_USERLIST_USERMODES
+    END
+    POPUP "&Hilfe"
+    BEGIN
+        MENUITEM "Befehle...",                  ID_HELP_COMMANDHELP
+        MENUITEM "Besuche Homepage",            ID_HELP_VISITHOMEPAGE
+        MENUITEM SEPARATOR
+        MENUITEM "&Über roboServ...",           ID_APP_ABOUT
+    END
+END
+
+IDR_SYSTRAY MENU DISCARDABLE 
+BEGIN
+    POPUP "SYSTRAY"
+    BEGIN
+        MENUITEM "Wiederherstellen",            ID_SYSTRAY_RESTORE
+        MENUITEM "&Beenden",                    ID_APP_EXIT
+    END
+END
+
+IDR_USERLIST MENU DISCARDABLE 
+BEGIN
+    POPUP "Userlist"
+    BEGIN
+        MENUITEM "Adminrechte geben",           ID_USERLIST_ADDADMIN
+        MENUITEM "Adminrechte entziehen",       ID_USERLIST_REMOVEADMIN
+        MENUITEM SEPARATOR
+        MENUITEM "Stimme geben",                ID_USERLIST_GIVEVOICE
+        MENUITEM "Knebeln",                     ID_USERLIST_REMOVEVOICE
+        MENUITEM SEPARATOR
+        MENUITEM "Agentenrechte geben",         ID_USERLIST_ADDAGENT
+        MENUITEM "Agentenrechte entziehen",     ID_USERLIST_REMOVEAGENT
+        MENUITEM SEPARATOR
+        MENUITEM "&Rausschmeißen",              ID_USERLIST_KICK
+        MENUITEM "Raumschmeißen und verbannen", ID_USERLIST_KICKBAN
+        MENUITEM "Verbannen",                   ID_USERLIST_BAN
+        MENUITEM SEPARATOR
+        MENUITEM "Namen kopieren",              ID_USERLIST_COPYUSERNAME
+        POPUP "Erweitert"
+        BEGIN
+            MENUITEM "IP kopieren",                 ID_USERLIST_COPYIP
+            MENUITEM SEPARATOR
+            MENUITEM "Unsichtbar",                  ID_USERLIST_HIDE
+            MENUITEM "Sichtbar",                    ID_USERLIST_SHOW
+            MENUITEM SEPARATOR
+            MENUITEM "Ghost entfernen",             ID_USERLIST_REMOVEGHOST
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Statistik anzeigen",          32831
+        MENUITEM "Benutzerrechte anzeigen",     32834
+        MENUITEM SEPARATOR
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_HOSTBAR TOOLBAR DISCARDABLE  16, 16
+BEGIN
+    BUTTON      32805
+    SEPARATOR
+    BUTTON      32804
+    SEPARATOR
+    BUTTON      32806
+    SEPARATOR
+    BUTTON      32786
+    BUTTON      32808
+END
+
+IDR_LANGBAR TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      32787
+END
+
+IDR_MAINFRAME TOOLBAR MOVEABLE PURE  16, 15
+BEGIN
+    BUTTON      ID_FILE_OPEN
+    BUTTON      32783
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+END
+
+IDR_TOOLBAR2 TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_VIEW_LIKE_STUDIO_2005
+    BUTTON      32841
+    BUTTON      32843
+    BUTTON      32842
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        VERTGUIDE, 10
+        VERTGUIDE, 66
+        VERTGUIDE, 85
+        VERTGUIDE, 103
+        VERTGUIDE, 170
+        VERTGUIDE, 180
+        BOTTOMMARGIN, 212
+        HORZGUIDE, 64
+        HORZGUIDE, 76
+        HORZGUIDE, 88
+        HORZGUIDE, 98
+        HORZGUIDE, 107
+        HORZGUIDE, 120
+        HORZGUIDE, 132
+        HORZGUIDE, 146
+        HORZGUIDE, 161
+        HORZGUIDE, 176
+    END
+
+    IDD_IN_BAR_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 199
+        VERTGUIDE, 14
+        VERTGUIDE, 63
+        VERTGUIDE, 192
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 242
+        HORZGUIDE, 35
+        HORZGUIDE, 60
+        HORZGUIDE, 102
+        HORZGUIDE, 121
+        HORZGUIDE, 147
+        HORZGUIDE, 159
+        HORZGUIDE, 191
+        HORZGUIDE, 208
+        HORZGUIDE, 213
+        HORZGUIDE, 219
+    END
+
+    IDD_LOGIN_CFG, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 201
+        VERTGUIDE, 10
+        VERTGUIDE, 74
+        VERTGUIDE, 139
+        VERTGUIDE, 196
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 243
+        HORZGUIDE, 11
+        HORZGUIDE, 24
+        HORZGUIDE, 38
+        HORZGUIDE, 51
+        HORZGUIDE, 64
+        HORZGUIDE, 78
+        HORZGUIDE, 93
+        HORZGUIDE, 105
+        HORZGUIDE, 190
+        HORZGUIDE, 203
+        HORZGUIDE, 216
+    END
+
+    IDD_MISC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 198
+        VERTGUIDE, 10
+        VERTGUIDE, 68
+        VERTGUIDE, 72
+        VERTGUIDE, 114
+        VERTGUIDE, 146
+        VERTGUIDE, 190
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 243
+        HORZGUIDE, 49
+        HORZGUIDE, 59
+        HORZGUIDE, 73
+        HORZGUIDE, 85
+        HORZGUIDE, 96
+    END
+
+    IDD_OPENCONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 254
+        VERTGUIDE, 39
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 75
+        HORZGUIDE, 42
+    END
+
+    IDD_SUBCHANNELS_CFG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 199
+        VERTGUIDE, 184
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 242
+        HORZGUIDE, 62
+        HORZGUIDE, 78
+        HORZGUIDE, 95
+        HORZGUIDE, 113
+    END
+
+    IDD_UPDATE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 337
+        VERTGUIDE, 14
+        VERTGUIDE, 331
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 185
+        HORZGUIDE, 17
+        HORZGUIDE, 114
+        HORZGUIDE, 145
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "roboServe\n\nroboServe\n\n\nroboServ.Document\nroboServ.Document"
+    IDS_BANLISTINGSTART     "List of banned users"
+    IDS_CHANNELLIST         "Channel List"
+    IDS_CHANNELSTATS1       "Channel Statistics for %s"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CHANNELSTATS2       "+ Joined at %s\n+ %u users\n+ %u Messages Total\n+ %u Messages by you (%d%%)\n+ Lurkmeter: %s\n+ Messages/Second: %.02f\n+ Host is %s\n+ on %s\n"
+    IDS_CHANNELSTATS3       "End of Statistics\n"
+    IDS_CLIENTDISC          "Client closed."
+    IDS_COMMAND_EXECUTED    "Command '%s' was executed.\n"
+    IDS_COMMAND_NOTUNDERSTOOD 
+                            "Command '%s' not understood. Type Help for available commands\n\n"
+    IDS_COMMANDBAR          "Command Input"
+    IDS_CONNECTING          "Connecting. Stand by..."
+    IDS_DEFAULT_KEYMSG      "This channel is password protected.\\nPlease enter the password now"
+    IDS_DEFAULT_MOTD        "#c17#%ROOMNAME% is powered by roboServe\\n#c18#Your IP is %IP%\\n#c19#Type #c1#/commands#c19# for a list of available commands"
+    IDS_DEFAULT_TOPIC       "Powered by roboServe (http://mxcontrol.sf.net)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDR_START_NODESERVER    "Start Server console to create a server or to host a chatroom\nStart Serverconsole"
+    IDR_TOOLBAR2            "Show or hide the Look&Feel bar\nToggle Look&Feel bar"
+    IDS_BANLISTING          "%s [%s/%s]"
+    IDS_BANLISTINGEND       "Ban-listing complete."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ERROR_PERMISSIONDENIED_SEND "You do not have permission to use '%s'"
+    IDS_ERROR_PORT          "Port 6699 is reserved for WPN Listing functionality."
+    IDS_ERROR_REDIRECT_ROOMNAMEINVALID 
+                            "%s does not appear to be a valid room name. Redirect aborted."
+    IDS_ERROR_ROOMLENGTH    "Roomname too long. Maximum lenght is 40 characters."
+    IDS_ERROR_ROOMNAME_EMPTY "Roomname must not be emtpy!"
+    IDS_ERROR_ROOMNAME_INVALID "Roomname does not appear to be valid!"
+    IDS_ERROR_SERVER_FILE   "Could not access the server configuration file."
+    IDS_ERROR_SERVER_HANDSHAKE 
+                            "\nHandshake with incoming client [%s %s/%s] failed"
+    IDS_ERROR_SERVER_HOST   "Error: Could not host room'%s'\n"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ERROR_SERVER_KEYEXISTS "Key already set for this channel."
+    IDS_ERROR_SERVER_NOKEY  "No Key set for this channel."
+    IDS_ERROR_SERVER_NOROOM "No room to stop.\n"
+    IDS_ERROR_SERVER_ONEROOMPERCONSOLE 
+                            "You can only host one room per console.\n"
+    IDS_ERROR_SERVER_SYNTAXERROR 
+                            "Syntax Error or one Parameter is invalid. Correct call is:\nhost <IP> <PORT> <ROOM>\n"
+    IDS_ERROR_SERVER_WRONGKEY "Invalid Key"
+    IDS_ERROR_TIMEOUT       "The connection timed out."
+    IDS_ERROR_UNKNOWN_ID    "Sorry, the error number 0x%08x is unknown (%d)"
+    IDS_ERROR_WINSOCK       "Could not initialize Winsock."
+    IDS_EXITQUESTION        "You are currently hosting a channel.\nDo you really want to quit roboServe?"
+    IDS_FINISHED            "Finished."
+    IDS_FIXME_NAME_ERROR    "Fix-me: Could not find user %s"
+    IDS_FIXME_UNKNOWN_COMMAND "Fixme: Unknown Command 0x%X len=%d cmd=%s"
+    IDS_FLOODBLOCK          "%s has been kicked because of message- or namechange-flooding"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_USERMODES           "Modes for %s: %s"
+    IDS_USERNAME            "Username"
+    IDS_USERS               "%03d users"
+    IDS_USERSTATS           "%s: Client: %s %s. Hostname: %s. Joined at %s %s as %s. %d messages."
+    IDS_VIS                 "Visual Styles"
+    IDS_WARN_USERNAMEHIJACK "Username HiJack blocked [%s %s]"
+    IDS_WELCOME1            "Welcome to %s\r\nType help for a list of available commands\r\n"
+    IDS_WELCOME2            "<Use Page UP/Page Down to scroll through available commands>"
+    IDS_WINMX353_WRONGJOIN_WARNING 
+                            "Warning: You used the MXChatd compatible join method to enter this room. To enjoy the full potential of the new chatroom engine, please join normally :)"
+    IDS_WPN_CONNECTED       "WPN Connected."
+    IDS_WPN_CONNECTING      "WPN Connecting..."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_WPN_DISCONNECTED    "WPN Disconnected."
+    IDS_WPN_WARNING         "Note: As long as you are not connected to the WinMX Peer Network, you can not browse other peoples shares, view the channellist and send/or recieve PM's!"
+    IDS_CHANNEL_START       "List of subchannels in %s:"
+    IDS_CHANNEL_STOP        "List of subchannels completed."
+    IDS_SUBCHANNEL_CLOSED   "Subchannel ""%s"" has been closed by %s."
+    IDS_SUBCHANNEL_NOTFOUND "Subchannel ""%s"" does not exist."
+    IDS_PUBLIC              "Public"
+    IDS_PRIVATE             "Password protected"
+    IDS_PASSWORDEMPTY       "The password must not be empty!"
+    IDS_NOCHANNELLOGIN      "You haven't specified in which channels the login is valid. You must select either ""Mainchannel"", ""Subchannel"" or both."
+    IDS_NOUSERMODE          "You must select at least on usermode to be assigned to this password."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ERROR_CMDEMPTY      "Empty command string. Type Help for available commands\n"
+    IDS_ERROR_COM           "Error intializing Com Interface. The application will terminate now,"
+    IDS_ERROR_COMCTRL       "Could not initialzie Common Controls."
+    IDS_ERROR_CONNECTFORCED "Error, could not connect to Primary Node on specified Host and Port."
+    IDS_ERROR_CONNECTING    "Error. roboServe was unable to establish a connection to %s. [%s]"
+    IDS_ERROR_FIXME         "Fixme: Unexpected stream state or unknown packet: '%s'"
+    IDS_ERROR_INVALID_SOCKET "Invalid Socket."
+    IDS_ERROR_LOGFILE_OPEN  "Error: Could not open logfile."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ROOMRENAME          "Roomname changed from %s to %s"
+    IDS_ROOMS_ETA           "%04d Rooms (ETA: %s, %s, %s)"
+    IDS_RTF_BLOCK           "Sorry, I made a futile attemp to send an RTF exploit to the room. roboServe outsmarted me though and blocked it. Please kick my butt!"
+    IDS_SERVER_CFG_LOADED   "Room configuration has been loaded and room was started."
+    IDS_SERVER_CFG_SAVED    "Your settings have been saved."
+    IDS_SERVER_CLIENTS      "Total number of clients: %d"
+    IDS_SERVER_EXILED       "has been exiled to '%s' by %s (%s)."
+    IDS_SERVER_FILTER       "Server Configuration Files (*.rsi)|*.rsi|All Files (*.*)|*.*||"
+    IDS_SERVER_HELP         "\nAvailable Commands:\nhost <IP> <PORT> <ROOM> - Host a new room\nredirect <TARGET-ROOM> - Redirect users and stop room\nchannelname <NAME> - change channelname to <NAME>\nstop   - Stop currently hosted room\n/topic <topic> - Set channel topic\n/motd <motd> - Set channel motd\n/kick <user> [reason] - Kick a user\n/exile <user> <target-room> [reason] - Send a user to a room\n/listbans -list all banned users/IP's/hostnames\n/say [/me] <msg> - Send a message to the room with the name of the God-User\n/impose <name> [/me] <message> - Send a message to the room using any name\nFor a complete list of available commands read commands.txt."
+    IDS_SERVER_IPCLIENT     " + RoboMX / Rabbit  (IPClient 1.0, deprecated): %d (%.2f%%)"
+    IDS_SERVER_JOINS        "Total number of joins: %d"
+    IDS_SERVER_JOINSFAILED  "Number of failed joins: %d"
+    IDS_SERVER_KICKED       "has been kicked by %s (%s)"
+    IDS_SERVER_KICKEDBANNED "has been banned and kicked by %s (%s)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SERVER_MSGS         "Number of processed messages: %d"
+    IDS_SERVER_MX331        " + WinMX 3.3x (or compatible): %d (%.2f%%)"
+    IDS_SERVER_MX353        " + WinMX 3.5x (or compatible): %d (%.2f%%)"
+    IDS_SERVER_OTHER        " + Other: %d (%.2f%%)"
+    IDS_SERVER_RABBIT       " + Rabbit: %d (%.2f%%)"
+    IDS_SERVER_RCMS         "Info: Room supports RCMS command set."
+    IDS_SERVER_RMX          " + RoboMX: %d (%.2f%%)"
+    IDS_SERVER_ROBOMX       "Info: Room supports RoboMX protocol extensions."
+    IDS_SERVER_ROOMRENAME   "Channelname changed from '%s' to '%s' [Full name is '%s']\n"
+    IDS_SERVER_SETMODE      "sets mode: %s"
+    IDS_SERVER_STATS        "Server Statistics:"
+    IDS_SERVER_STATSEND     "End of statistics."
+    IDS_SERVER_SUCCESS      "Room '%s' was successfully hosted\n"
+    IDS_SERVER_TERMINATED   "Room '%s' was terminated\n"
+    IDS_SERVER_UNBAN        "/unban %s [%s/%s]"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDR_HOSTBAR             "Show or hide the hostbar\nToggle hostbar"
+    IDR_LANGBAR             "Show/hide the language bar\nShow/hide the language bar"
+    IDR_MESSAGEVIEW_TMPL    "MessageView\nMessageView\nMessageView\nMessageView Files (*.mes)\nmes\nMessageView.Document\nMessageView Document"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ERROR_LOGIN_KEY     "Error during key-exchange"
+    IDS_ERROR_LOGIN_REJECTED "Login rejected :("
+    IDS_ERROR_LOGIN_UNKNOWN "Crucial Halt - Hang on, WHAT was that?"
+    IDS_ERROR_NETWORK       "A network operation failed. %s"
+    IDS_ERROR_NO_CHATSERVER "Error. No chat server is running on the address specified."
+    IDS_ERROR_NODEREQUIRED  "You must specify a hostname and the TCP of the Primary-Node you want to connect to."
+    IDS_ERROR_NOTUNDERSTOOD " Command '%s' not understood. Type Help for available commands\n"
+    IDS_ERROR_NOTUNDERSTOOD_SEND 
+                            "Command '%s' not understood. May be you missed a parameter or misspelled it?"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SERVER_UPTIME       "Channel is running since %s, %s"
+    IDS_SERVER_WINMX353     "Info: Room uses WinMX 3.5x protocol"
+    IDS_TOOL_JOINVARIABLES  "You may use following variables here:\n\n%NAME%, %RAWNAME%, %IP%, %HOSTNAME%, %FILES%, %LINE%\n%USERS% %ROOMNAME% %TIME% %DATE% %ROBOMX%"
+    IDS_TOOLBAR             "ToolBar"
+    IDS_TOPIC               "Topic: %s"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_LOGIN_OK            "Login granted :)"
+    IDS_LURKMETER           "Lurkmeter: %s"
+    IDS_LURKMETER1          "%f nL"
+    IDS_LURKMETER2          "(infinite) nL"
+    IDS_MODES               "Channel Modes"
+    IDS_NOSUCHBAN           "'%s' not found in ban-list."
+    IDS_NOVOICE             "You don't have a voice."
+    IDS_PING                "Ping server: bytes=%d time %sms TTL=%d"
+    IDS_PM_AWAY             "I am currently afk, %s."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_REALLYSTOP          "Do you really want to stop the room?"
+    IDS_REDIRECTING         "Redirecting to %s"
+    IDS_RENAMEMSG           "%s is now known as %s"
+    IDS_RESTART             "You have to restart roboServe to take the changes into effect."
+    IDS_ROBOMX_ROOMSERVER   "roboServe Roomserver\nType help for available commands...\n"
+    IDS_ROOMINVISIBLE       "Room not visible on the WPN!"
+    IDS_ROOMIP              "Room IP"
+    IDS_ROOMNAME            "Roomname"
+    IDS_ROOMNOWVIS          "Room now visible on the WPN :-)"
+    IDS_ROOMPORT            "Room Port"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "roboServe"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_OPEN            "Open an existing roboServe configuration file\n Load configuration file"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_CHANNEL_CHANNELLIST  "Show or hide the menubar\nToggle menubar"
+    ID_CHATROOM_ASCIIARTDESIGN 
+                            "Opens a dialog where you can edit ASCII art pictures in and then paste it into the channel"
+    ID_CHATROOM_CLEARSCREEN "Clear all text"
+    ID_CHATROOM_COPYROOMNAME "Copy the roomname to clipboard"
+    ID_CHATROOM_DISPLAYINCHANNEL_AVERAGELAG 
+                            "Displays the average Lag between what you type and when you see it in the channel\nAverage Lag"
+    ID_CHATROOM_DISPLAYINCHANNEL_SYSTEMINFO 
+                            "Display Information about your Windows and Computer in the channel\nSystem Info"
+    ID_CHATROOM_DISPLAYINCHANNEL_SYSTEMUPTIME 
+                            "Display how long your Windows has been running in channel\nSystem Uptime"
+    ID_CHATROOM_REJOIN      "Rejoin the channel"
+    ID_EXIT                 "Disconnect from channel\nDisconnect"
+    ID_FILE_NEW2            "Create a new document\nNew"
+    ID_FILE_SAVECFG         "Save configuration to a file\nSave configuration"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_HELP_COMMANDHELP     "Display the command help\nCommand Help"
+    ID_HELP_VISITHOMEPAGE   "Open roboServe Homepage in your default Browser\nVisit Homepage"
+    ID_HOSTCHANNEL          "Host channel on this ip, port and name\nStart channel"
+    ID_LANGSWITCHER         "Switch the language\nLanguage"
+    ID_MYFILE_NEW           "Give user a voice. This is only effective in moderated channels"
+    ID_NEXT                 "Next Window\nNext Window"
+    ID_POPUP_COPYROOMNAME   "Copy the room name"
+    ID_POPUP_COPYTOPIC      "Copies the room topic"
+    ID_POPUP_LOOPBACKJOIN   "Quick join without adjusting user details"
+    ID_PREV                 "Switch to previous Window\nPrevious Window"
+    ID_RECONNECT            "Reconnect to channel\nReconnect to channel"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_RENAME               "Remove agent status"
+    ID_ROBOMX_OPENSERVERCONFIGURATION 
+                            "Load Settings from a roboServe Configuration file"
+    ID_ROBOMX_SAVESERVERCONFIGURATION 
+                            "Save current room configuration to a file"
+    ID_ROOMIP               "IP for the room\nIP"
+    ID_ROOMNAMEBOX          "Enter roomname here\nRoomname"
+    ID_ROOMPORT             "Port of the room\nPort"
+    ID_STOPCHANNEL          "Stop the currently hosted channel\\Stop channel"
+    ID_USERLIST_ADDADMIN    "Give user adminrights. Admins may kick/ban users and change channgel settings"
+    ID_USERLIST_BAN         "Ban selected user\nBan selected user"
+    ID_USERLIST_COPYIP      "Copy IP of user to the clipboard\nCopy the IP to the clipboard"
+    ID_USERLIST_COPYUSERNAME "Copy the username to clipboard"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+    IDS_COLORS_DISABLE      "Disable colors"
+    IDS_COLORS_EVERYONE     "Enable colors for Everyone"
+    IDS_COLORS_VOICED       "Enable colors for Voiced, Admin, Agents"
+    IDS_COLORS_ADMIN        "Enable colors for Admin, Agents"
+    IDS_COLORS_AGENTS       "Enable colors for Agents"
+    IDS_SUB_EVERYONE        "Everyone"
+    IDS_SUB_VOICED          "Voiced, Admins and Agents"
+    IDS_SUB_ADMIN           "Admins and Agents"
+    IDS_SUB_AGENTS          "Agents"
+    IDS_SUB_HOST            "Host only"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_LOGINEXISTS         "The password you entered is already in use. Please select a different password."
+    IDS_NOSELECTION         "Select an item to edit first."
+    IDS_DELETELOGIN         "Are you sure you want to delete this login?"
+    IDS_ADVERTISE_ROSE      "You are about to disable the [roSe] prefix in the topic.\n\nroboServe is free software so I do not force anyone to advertise roboServe in the topic\nHowever I ask you to reconsider this: I put a lot of time in writing this program for\nyou to enjoy and it would be nice if you would ""pay"" me back by leaving the [roSe] in\nthe topic. Thanks.\n\nDo you still want to disable the topic prefix?"
+    IDS_INIT_1              "Creating Systemtray Icon ..."
+    IDS_INIT_2              "Initializing toolbars ..."
+    IDS_INIT_3              "Attempting to resolve external IP ..."
+    IDS_INIT_4              "Creating windows ..."
+    IDS_INIT_5              "Settings up command manager ..."
+    IDS_INIT_6              "Creating docking windows ..."
+    IDS_INIT_7              "Applying visual style ..."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_USERLIST_UNBAN       "Unban the user"
+    ID_USERLIST_UNIGNORE    "Unignore user"
+    ID_USERLIST_USERMODES   "Display usermodes of this user\nUsermodes"
+    ID_VIEW_CHANNELBAR      "Show or hide the channelbar\nToggle Channel Bar"
+    ID_VIEW_COLOR_CONTROLS  "Display color controls in active view\nToggle color controls"
+    ID_VIEW_FULL_SCREEN     "Toggles Full Screen mode on/off"
+    ID_VIEW_IGNOREDUSERS    "Display/Edit Ignored &Users"
+    ID_VIEW_LIKE_OFFICE_2003 
+                            "Switch to Office 2003 theme\nSwitch to Office 2003 theme"
+    ID_VIEW_LIKE_OFFICE_2K  "Switch to Office 2000 theme\nSwitch to Office 2000 theme"
+    ID_VIEW_LIKE_OFFICE_XP  "Switch to Office XP theme\nSwitch to Office XP theme"
+    ID_VIEW_LOGFILE         "View Channel Logfile"
+    ID_VIEW_MENUBAR         "Show or hide the menubar\nToggle MenuBar"
+    ID_VIEW_OPTIONS         "Copy IP to clipboard"
+    ID_VIEW_RESIZABLE_BAR_0 "Show or hide the command  bar\nToggle command bar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_RESIZABLE_BAR_1 "Show or hide the userlist\nToggle userlist"
+    ID_VIEW_RESIZABLE_BAR_2 "Show or hide the settings bar\nToggle quick settings bar"
+    ID_VIEW_RESIZABLE_BAR_4 "Agents may use /impose <username> <message>"
+    ID_VIEW_TOOLBARS_LANGUAGEBAR 
+                            "Show/hide the language bar\nShow/hide the language bar"
+    ID_VIEW_TRUSTEDUSERS    "Display/Edit Trusted Users"
+    ID_USERLIST_REMOVEGHOST "Remove Ghost\nRemove Ghost"
+    ID_VIEW_LIKE_STUDIO_2005 
+                            "Switch to Visual Studio 2005 theme\nSwitch to Visual Studio 2005 theme"
+    ID_FILE_COPYCHANNELNAME "Copy channelname to clipboard\nCopy channelname to clipboard"
+    ID_FILE_COPYLOOPBACKNAME 
+                            "Copy roomname with loopback fix to clipboard\nCopy roomname with loopback fix to clipboard (ROOM_010007FXXX)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_USERLIST_CUSTOMIZETHISMENU "Customize the menu commands for this room"
+    ID_USERLIST_GIVEVOICE   "Give selected user a voice\nGive voice (Room must be set to moderated)"
+    ID_USERLIST_HIDE        "Hidden users do not appear on the userlist\nHidden users do not appear on the userlist"
+    ID_USERLIST_IGNORE      "Ignore user"
+    ID_USERLIST_KICK        "Kick selected user\nKick selected user"
+    ID_USERLIST_KICKBAN     "Kick and ban user\nKick and ban user"
+    ID_USERLIST_PRINTIP     "Prints users IP Address"
+    ID_USERLIST_PRINTUSERSTAT "Print user statistics"
+    ID_USERLIST_READUSERMESSAGE "Read user message"
+    ID_USERLIST_REDIRECT    "Redirect the user"
+    ID_USERLIST_REMOVEADMIN "Remove Adminrights from user"
+    ID_USERLIST_REMOVEVOICE "Muzzle selected user\nMuzzle user (Room must be moderated)"
+    ID_USERLIST_SENDMESSAGE "Muzzle a user. This only works in moderated channels."
+    ID_USERLIST_SHOW        "Show selected user again\nShow a hidden user"
+    ID_USERLIST_STATISTICS  "Display statistics for this user\nStatistics"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_HANDSHAKE_START     "Starting handshake"
+    IDS_HIDDENLISTING       ": %s"
+    IDS_HIDDENLISTINGEND    "Hidden User-Listing complete."
+    IDS_HIDDENLISTINGSTART  "List of hidden users:"
+    IDS_HOSTBAR             "Hostbar"
+    IDS_LANGUAGE            "Language"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_TOPIC2              "Topic"
+    IDS_USERCLIENT          "Client"
+    IDS_USERFILES           "Files"
+    IDS_USERHOSTNAME        "Hostname"
+    IDS_USERIP              "IP"
+    IDS_USERLINE            "Line"
+    IDS_USERLIST            "Userlist"
+    IDS_USERMODE            "Modes"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_NOGHOST             "Warning:\n\nThe user %s appears to be still in the room. If you remove the entry from the userlist this might disable roboServe from functioning correctly.\n\nAre you sure you want to remove this entry from the userlist?"
+    IDS_CHECK_UPDATE        "Checking for updates..."
+    IDS_USERLEVELWARNING    "Warning!\n\nGranting all users Adminrights by default is a security risk. Are you sure you want to do this?"
+    IDS_CMD_START           "Available commands:"
+    IDS_CMD_LOGIN           "/login <password> - Login to this channel"
+    IDS_CMD_CHANNELNAME     "/channelname - Displays the channelname"
+    IDS_CMD_LISTCHANNELS    "/listchannels - List subchannels in this room"
+    IDS_CMD_CREATECHANNEL   "/createchannel <name> - Create a subchannel"
+    IDS_CMD_JOIN            "/join <subchannel> - Join <subchannel>"
+    IDS_CMD_NOCLR           "/disablecolors - Disable colors for yourself"
+    IDS_CMD_ENABLECLR       "/enablecolors - Enablecolors for yourself"
+    IDS_CMD_PRIVATE         "/private <user> <msg> - Send <msg> to <user>"
+    IDS_CMD_OP              "Basic operator commands. For a complete list see http://mxcontrol.sf.net/roboServ/commands.txt"
+    IDS_CMD_KICK            "/kick <user> [reason] - kick <user>. [reason] is optional"
+    IDS_CMD_KICKBAN         "/kickban <user> [reason] - Kick and ban <user>. [reason] is optional"
+    IDS_CMD_BAN             "/ban <user/ip/host> - Ban a user an IP or a hostname (wildcards supported)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CMD_UNBAN           "/unban <user> - Unban a user"
+    IDS_CMD_LISTBANS        "/listbans - list all banned users/IP's"
+    IDS_CMD_EXILE           "/exile <user> [reason] - Send a user to the exile"
+    IDS_CMD_TOPIC           "/topic <topic> - Set topic"
+    IDS_CMD_MOTD            "/setmotd <motd> - Set message of the day"
+    IDS_CMD_LIMIT           "/limit <limit> - Set channel userlimit"
+    IDS_CMD_MODES           "/channelmodes - Displays channel settings"
+    IDS_CMD_STATA           "/stat - Displays channel statistics"
+    IDS_CMD_STATB           "/stat <user> - Displays user statistics"
+    IDS_IDS_CMD_ADMIN       "/admin <user> - Grant a user operator permissions"
+    IDS_CMD_REMADMIN        "/remadmin <user> - Remove operator"
+    IDS_CMD_AGENT           "Basic agent commands. For a complete list see http://mxcontrol.sf.net/roboServ/commands.txt"
+    IDS_CMD_IMPOSE          "/impose <fakeuser> [/me] <msg> - Send a message with fakeusername to the room"
+    IDS_CMD_ADDAGENT        "/agent <user> - Grant a user agent permissions"
+    IDS_CMD_REMAGENT        "/remagent <user> - Remove agent"
+    IDS_CMD_ENABLEEXILE     "/enableexile <targetroom - Enable /exile commands and set targetroom"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CMD_DISABLEEXILE    "/disableexile - Disable /exile commands"
+    IDS_CMD_END             "Commands End."
+    IDS_STATUS_USERS        "Users: %03d/%03d"
+    IDS_STATUS_SUBROOMS     "Subchannels: %02d/%02d"
+    IDS_SUBJOIN             "Redirecting you to subchannel %s."
+    IDS_JOINNOROOM          "Error: There is no subchannel ""%s"""
+    IDS_SUBEQUALMAIN        "Error: Name of subchannel may not be equal to mainchannels name."
+    IDS_SUBCREATED          "Subchannel %s has been created."
+    IDS_CMD_SUBPART         "/part - Will redirect you to the mainchannel if you are in a subchannel"
+    IDS_STATUS_PRIMARIES    "Primaires: %d/%d"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
